@@ -2,12 +2,10 @@
 //For best practices such as error tracking use this https://zaicheng.me/2016/06/20/react-native-initial-setup/
 //Finally don't forget GitHub and Git version control
 
-'use strict';
+let React = require('react');
+let ReactNative = require('react-native');
 
-var React = require('react');
-var ReactNative = require('react-native');
-
-var styles = ReactNative.StyleSheet.create({
+let styles = ReactNative.StyleSheet.create({
   text: {
     color: 'black',
     backgroundColor: 'white',
@@ -18,6 +16,8 @@ var styles = ReactNative.StyleSheet.create({
 
 class PropertyFinderApp extends React.Component {
   render() {
-    return React.createElement(ReactNative.Text, {style: styles.text}, "Hello World!");
+    return React.createElement(ReactNative.Text, { style: styles.text }, 'Hello World!');
   }
 }
+
+ReactNative.AppRegistry.registerComponent('PropertyFinder', () => { return PropertyFinderApp; });
