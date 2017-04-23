@@ -91,17 +91,15 @@ class SearchPage extends Component {
   // Will swap out later
   constructor(props) {
     // Fix to 'this' is not allowed before super() error https://github.com/lwansbrough/react-native-multipeer/issues/3
-    super()
+    super(props);
     this.state = {
       searchString: 'london',
       isLoading: false,
+      message: '',
     };
   }
 
-  _executeQuery(query) {
-    console.log(query);
-    this.setState({ isLoading: true });
-  }
+
 
   onSearchPressed() {
     const query = urlForQueryAndPage('place_name', this.state.searchString, 1);
@@ -113,6 +111,12 @@ class SearchPage extends Component {
     this.setState({ searchString: event.nativeEvent.text });
     console.log(this.state.searchString);
   }
+
+  _executeQuery(query) {
+    console.log(query);
+    this.setState({ isLoading: true });
+  }
+
   render() {
     console.log('SearchPage.render');
 
@@ -153,6 +157,7 @@ class SearchPage extends Component {
         </TouchableHighlight>
         <Image source={require('../Resources/house.png')} style={styles.image} />
         {spinner}
+        <Text style={styles.description}>{this.state.message}</Text>
       </View>
     );
   }
