@@ -1,6 +1,6 @@
-//Tutorial used to make this app: https://www.raywenderlich.com/126063/react-native-tutorial
-//For best practices such as error tracking use this https://zaicheng.me/2016/06/20/react-native-initial-setup/
-//Finally don't forget GitHub and Git version control
+// Tutorial used to make this app: https://www.raywenderlich.com/126063/react-native-tutorial
+// For best practices such as error tracking use this https://zaicheng.me/2016/06/20/react-native-initial-setup/
+// Finally don't forget GitHub and Git version control
 
 const React = require('react');
 const ReactNative = require('react-native');
