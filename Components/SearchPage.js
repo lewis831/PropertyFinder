@@ -68,6 +68,7 @@ You then update the component state to reflect the new input text, which trigger
 onSearchTextChanged() then wraps things up by logging the new search string.
 */
 
+// Swapping out for different JSON API later
 function urlForQueryAndPage(key, value, pageNumber) {
   const data = {
     country: 'uk',
